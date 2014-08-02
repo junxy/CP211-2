@@ -21,6 +21,7 @@
 		B59E0D0C198CCA0D00DDB088 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E0CEE198CCA0D00DDB088 /* UIKit.framework */; };
 		B59E0D14198CCA0D00DDB088 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B59E0D12198CCA0D00DDB088 /* InfoPlist.strings */; };
 		B59E0D16198CCA0D00DDB088 /* MatchismoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B59E0D15198CCA0D00DDB088 /* MatchismoTests.m */; };
+		B59E0D22198CCB9D00DDB088 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = B59E0D21198CCB9D00DDB088 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		B59E0D11198CCA0D00DDB088 /* MatchismoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MatchismoTests-Info.plist"; sourceTree = "<group>"; };
 		B59E0D13198CCA0D00DDB088 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B59E0D15198CCA0D00DDB088 /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchismoTests.m; sourceTree = "<group>"; };
+		B59E0D20198CCB9D00DDB088 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		B59E0D21198CCB9D00DDB088 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 				B59E0CFF198CCA0D00DDB088 /* CardGameViewController.h */,
 				B59E0D00198CCA0D00DDB088 /* CardGameViewController.m */,
 				B59E0D02198CCA0D00DDB088 /* Images.xcassets */,
+				B59E0D1F198CCB3B00DDB088 /* Model */,
 				B59E0CF1198CCA0D00DDB088 /* Supporting Files */,
 			);
 			path = Matchismo;
@@ -151,6 +155,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		B59E0D1F198CCB3B00DDB088 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B59E0D20198CCB9D00DDB088 /* Card.h */,
+				B59E0D21198CCB9D00DDB088 /* Card.m */,
+			);
+			path = Model;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -253,6 +266,7 @@
 				B59E0CFB198CCA0D00DDB088 /* CardGameAppDelegate.m in Sources */,
 				B59E0D01198CCA0D00DDB088 /* CardGameViewController.m in Sources */,
 				B59E0CF7198CCA0D00DDB088 /* main.m in Sources */,
+				B59E0D22198CCB9D00DDB088 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
