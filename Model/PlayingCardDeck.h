@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Junior xu. All rights reserved.
 //
 
-#import "Card.h"
+#import "Deck.h"
 
-@interface PlayingCardDeck : Card
+@interface PlayingCardDeck : Deck
 
 @end
