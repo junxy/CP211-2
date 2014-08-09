@@ -38,7 +38,7 @@
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="filipsLabel" destination="l1U-ZV-U5b" id="KyD-Fd-M7F"/>
+                        <outlet property="flipsLabel" destination="l1U-ZV-U5b" id="zuw-If-07D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

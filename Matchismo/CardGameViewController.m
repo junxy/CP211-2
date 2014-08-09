@@ -11,7 +11,7 @@
 #import "Deck.h"
 
 @interface CardGameViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *filipsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic) Deck *deck;
 @end
@@ -30,7 +30,8 @@
 - (void)setFlipCount:(int)flipCount {
     _flipCount = flipCount;
     
-    self.filipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    NSLog(@"flipCount changed to %d", self.flipCount);
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
