@@ -24,12 +24,15 @@
 
 - (CardMatchingGame *)game
 {
-    if (_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
+    if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                          usingDeck:[self createDeck]];
+    // 少了个金叹号，找了半天BUG啊，，，好在 Xcode 调试起来还不错
+//    NSLog(@"game => %@",_game);
     return _game;
 }
 
-- (Deck *)deck {
+- (Deck *)deck
+{
     if(!_deck) _deck = [self createDeck];
     return _deck;
 }
@@ -38,15 +41,16 @@
     return [[PlayingCardDeck alloc] init];
 }
 
-- (void)setFlipCount:(int)flipCount {
+- (void)setFlipCount:(int)flipCount
+{
     _flipCount = flipCount;
-    
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
     NSLog(@"flipCount changed to %d", self.flipCount);
 }
 
-- (IBAction)touchCardButton:(UIButton *)sender {
-//    if ([[sender currentTitle] length]) {
+- (IBAction)touchCardButton:(UIButton *)sender
+{
+//    if ([sender.currentTitle length]) {
 //        [sender setBackgroundImage:[UIImage imageNamed:@"CardBack"]
 //                          forState:UIControlStateNormal];
 //        [sender setTitle:@"" forState:UIControlStateNormal];
@@ -79,11 +83,15 @@
 
 - (NSString *) titleForCard:(Card *)card
 {
-    return card.isChosen ? card.contents : @"";
+    NSString *result = card.isChosen ? card.contents : @"";
+//    NSString *result = card.isChosen ? @"current" : @"";
+    NSLog(@"card title => current :%@, origin: %@", result, card.contents);
+    return result;
 }
 
 - (UIImage *)backgroundImageForCard:(Card *)card
 {
+    NSLog(@"card isChosen => %d, content => %@", card.isChosen, card.contents);
     return [UIImage imageNamed: card.isChosen ? @"CardFront" : @"CardBack"];
 }
 

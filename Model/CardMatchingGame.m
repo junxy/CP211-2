@@ -21,7 +21,9 @@
     return _cards;
 }
 
-- (instancetype)initWithCardCount:(NSInteger)count usingDeck:(Deck *)deck{
+- (instancetype)initWithCardCount:(NSInteger)count
+                        usingDeck:(Deck *)deck
+{
     self = [super init]; // super's designated initializer
     if (self){
         for (int i = 0; i < count; i++) {
@@ -33,7 +35,6 @@
                 break;
             }
         }
-        
     }
     return self;
 }
@@ -74,9 +75,7 @@ static const int COST_TO_CHOOSE = 1;
             self.score -= COST_TO_CHOOSE;
             card.chosen = YES;
         }
-        
     }
 }
-
 
 @end
