@@ -22,6 +22,26 @@
 
 @implementation CardGameViewController
 
+- (IBAction)resetButton:(UIButton *)sender {
+    UIAlertView *resetConfirm = [[UIAlertView alloc] initWithTitle:@"Reset Confirm"
+                                                           message:@"Are you sure?"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Cancel"
+                                                 otherButtonTitles:@"OK", nil];
+    [resetConfirm show];
+}
+
+// ref: http://code.tutsplus.com/tutorials/ios-sdk-working-with-uialertview-and-uialertviewdelegate--mobile-3159
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    NSLog(@"Button %@ was selected.",title);
+    if ([title isEqualToString:@"OK"]) {
+        //TODO: reset
+        NSLog(@"todo reset");
+    }
+}
+
 - (CardMatchingGame *)game
 {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
